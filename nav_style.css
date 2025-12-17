@@ -1,0 +1,38 @@
+/* Shared navigation styles for PARCE lab pages */
+:root{
+  --nav-bg:#0b3954;
+  --nav-fg:#ffffff;
+  --nav-accent:#ffb703;
+}
+.site-nav{
+  background:var(--nav-bg);
+  color:var(--nav-fg);
+  padding:10px 18px;
+  box-shadow:0 2px 6px rgba(0,0,0,0.12);
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+.site-nav .nav-list{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.site-nav .brand{font-weight:700;margin-right:8px;color:var(--nav-accent)}
+.site-nav a{
+  color:var(--nav-fg);
+  text-decoration:none;
+  padding:8px 12px;
+  border-radius:8px;
+  transition:background .14s,transform .08s;
+  font-weight:600;
+}
+.site-nav a:hover{background:rgba(255,255,255,0.06);transform:translateY(-1px)}
+.site-nav a.active{background:var(--nav-accent);color:#072227}
+@media (max-width:600px){
+  .site-nav .nav-list{flex-wrap:wrap;gap:8px}
+  .site-nav a{padding:6px 10px}
+}
